@@ -2,7 +2,7 @@ print("The List Manager")
 
 
 def my_fuc():
-	import sys 
+	import sys
 	import os
 	import time
 
@@ -53,24 +53,26 @@ def my_fuc():
 
 		#edit Item
 		elif option == "4":
-				item = input("Enter the item to edit: ")
-				if not item in todo_list:
-						print("Item does not exist")
-				else:
-					confirmation = input("Are you sure you want to edit this item? (y/n) ")
-					if confirmation == "y":
-						new_item = input("Enter the new item: ")
-						if new_item in todo_list:
-							print("Item already exists")
-						else:
-							todo_list[todo_list.index(item)] = new_item
-							print("Item edited")
+			item = input("Enter the item to edit: ")
+			if not item in todo_list:
+				print("Item does not exist")
+			else:
+				confirmation = input("Are you sure you want to edit this item? (y/n) ")
+				if confirmation == "y":
+					new_item = input("Enter the new item: ")
+					if new_item in todo_list:
+						print("Item already exists")
+					else:
+						todo_list[todo_list.index(item)] = new_item
+						print("Item edited")
 
-				#clear List
-					elif option == "5":
-						todo_list = []
-						print("List cleared")
+			#clear List
+				elif option == "5":
+					todo_list = []
+					print("List cleared")
+
+		else:
+			print("Invalid option")
+
 
 my_fuc()
-
-
